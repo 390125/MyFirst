@@ -1,0 +1,14 @@
+@(labels: List[models.Label])
+
+@layout("メインページ") {
+  <h1>Labels</h1>
+  <p>現在DBが日本語に対応しておりませぬ。ご注意を</p>
+
+  <ul>
+    @for(label <- labels){
+      <li>@label.title [<a href="@routes.LabelC.edit(label.id)">編集する</a>]</li>
+    }
+  </ul>
+  <p><a href="@routes.LabelC.add">Add New</a></p>
+
+}

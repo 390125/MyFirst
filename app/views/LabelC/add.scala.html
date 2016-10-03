@@ -1,0 +1,12 @@
+@(form: Form[models.Label])
+
+@layout("ラベル追加") {
+  <h1>Add New</h1>
+
+  @helper.form(action = routes.LabelC.create) {
+    @(helper.inputText (
+      field = form("title")
+    ))
+    <input type="submit" value="NEW TASK！">
+  }
+}

@@ -1,0 +1,13 @@
+@(form: Form[models.Lavel])
+
+@layout("ラベル編集"){
+	<h1>UPDATE DATA</h1>
+
+	@helper.form(action = routes.LavelC.update){
+		<input type="hidden" value="@form("id").value" name="id">
+		@(helper.inputText (
+			field = form("title")
+		))
+		<input type="submit" value="更新">
+		}
+	}
