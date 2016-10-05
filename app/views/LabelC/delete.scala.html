@@ -1,0 +1,13 @@
+@(form: Form[models.Label])
+
+@layout("ラベル削除") {
+  <h1>削除確認ページ</h1>
+  <p>本当に削除するよ？？</p>
+
+  @helper.form(action = routes.LabelC.destroy) {
+    <input type="hidden" value="@form("id").value" name="id">
+    <input type="hidden" value="@form("title").value" name="title">
+    <p>@form("title").value</p>
+    <input type="submit" value="削除">
+  }
+}

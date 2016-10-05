@@ -8,6 +8,12 @@ import javax.persistence.*;
 import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 
+/**
+ *
+ * @author Takaya Sakuma
+ * ラベル用テーブルをDBに作成するクラス
+ */
+
 @Entity
 @Table(name = "label")
 public class Label extends Model {
