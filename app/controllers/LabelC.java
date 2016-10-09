@@ -10,6 +10,13 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import java.util.List;
+import views.html.LabelC.index;
+import views.html.LabelC.add;
+import views.html.LabelC.delete;
+import views.html.LabelC.edit;
+
+
 /**
  *
  * @author Takaya Sakuma

@@ -1,22 +1,10 @@
-New log file opened at Wed Oct 05 19:52:31 JST 2016 by 7836@DESKTOP-UJ38DB9
-Taking next connection to: 64340
-New client attempting to connect on port: 64341-64340
-  Address = /10.4.130.14:64340
-This client on port 64341 has uuid 3e370f17-8d72-4a2b-912d-999f64f75bbd configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-3e370f17-8d72-4a2b-912d-999f64f75bbd
-Taking next connection to: 64340
+New log file opened at Mon Oct 10 01:21:52 JST 2016 by 13272@DESKTOP-UJ38DB9
+Taking next connection to: 51233
+New client attempting to connect on port: 51234-51233
+  Address = /192.168.10.5:51233
+This client on port 51234 has uuid 56572a04-2fef-4dfe-9a02-988d24313490 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-56572a04-2fef-4dfe-9a02-988d24313490
+Taking next connection to: 51233
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 64340
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 64340
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 64340
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 64340
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 64340
+Taking next connection to: 51233
