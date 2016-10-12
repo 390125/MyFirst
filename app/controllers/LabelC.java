@@ -5,18 +5,14 @@ import java.util.List;
 import com.google.inject.Inject;
 
 import models.Label;
+import models.Task;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 import java.util.List;
-import views.html.LabelC.index;
-import views.html.LabelC.add;
-import views.html.LabelC.delete;
-import views.html.LabelC.edit;
-
-
+import views.html.LabelC.*;
 /**
  *
  * @author Takaya Sakuma
@@ -28,14 +24,25 @@ public class LabelC extends Controller {
     @Inject
     FormFactory formFactory;
 
+
+    /* 配列型変数Labelをもってindexへ */
     public Result index() {
         List<Label> labels = Label.findAll();
         return ok(index.render(labels));
     }
+
+    public Result show(Long id) {
+        Label label = Label.findById(id);
+        Form<Task> f = formFactory.form(Task.class);
+        return ok(show.render(label, f));
+    }
+
     public Result add() {
         Form<Label> f = formFactory.form(Label.class);
         return ok(add.render(f));
     }
+
+
     public Result create() {
         Form<Label> f = formFactory.form(Label.class).bindFromRequest();
         if (!f.hasErrors()) {
@@ -54,6 +61,8 @@ public class LabelC extends Controller {
         }
         return notFound();
     }
+
+
     public Result update() {
         Form<Label> f = formFactory.form(Label.class).bindFromRequest();
         if (!f.hasErrors()) {
@@ -64,6 +73,8 @@ public class LabelC extends Controller {
             return badRequest(edit.render(f));
         }
     }
+
+
     public Result delete(long id){
     	Label label = Label.findById(id);
         if (label != null) {
@@ -72,6 +83,8 @@ public class LabelC extends Controller {
         }
     	return notFound();
     }
+
+
     public Result destroy() {
         Form<Label> f = formFactory.form(Label.class).bindFromRequest();
         if (!f.hasErrors()) {
@@ -82,4 +95,5 @@ public class LabelC extends Controller {
             return badRequest();
         }
     }
+
 }

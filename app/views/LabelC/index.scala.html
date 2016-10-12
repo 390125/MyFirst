@@ -1,12 +1,16 @@
 @(labels: List[models.Label])
 
-@layout("めいんページ") {
+@layout("トップページ") {
   <h1>ラベル一覧</h1>
 
   <ul>
     @for(label <- labels){
-      <li>@label.title [<a href="@routes.LabelC.edit(label.id)">編集するよ</a> / <a href="@routes.LabelC.delete(label.id)">削除するよ</a>]</li>
+      <li>@label.title [
+      <a href="@routes.LabelC.show(label.id)">タスクを見る</a>/
+      <a href="@routes.LabelC.edit(label.id)">編集するよ</a> /
+      <a href="@routes.LabelC.delete(label.id)">削除するよ</a>]</li>
     }
   </ul>
   <p><a href="@routes.LabelC.add">Add New</a></p>
+
 }

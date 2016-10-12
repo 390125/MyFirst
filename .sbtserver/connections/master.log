@@ -1,10 +1,31 @@
-New log file opened at Mon Oct 10 01:21:52 JST 2016 by 13272@DESKTOP-UJ38DB9
-Taking next connection to: 51233
-New client attempting to connect on port: 51234-51233
-  Address = /192.168.10.5:51233
-This client on port 51234 has uuid 56572a04-2fef-4dfe-9a02-988d24313490 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-56572a04-2fef-4dfe-9a02-988d24313490
-Taking next connection to: 51233
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51233
+New log file opened at Wed Oct 12 09:45:59 JST 2016 by 6620@DESKTOP-UJ38DB9
+Taking next connection to: 50211
+New client attempting to connect on port: 50212-50211
+  Address = /172.20.10.3:50211
+This client on port 50212 has uuid a57dab76-9bf0-4d44-b284-4ed81df4e57e configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-a57dab76-9bf0-4d44-b284-4ed81df4e57e
+Taking next connection to: 50211
+New client attempting to connect on port: 50324-50211
+  Address = /172.20.10.3:50211
+Handshake exception on socket: 50324
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 50211
+New client attempting to connect on port: 50325-50211
+  Address = /172.20.10.3:50211
+This client on port 50325 has uuid a2656e63-ecb0-4fcc-ad26-577ac17dc453 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-a2656e63-ecb0-4fcc-ad26-577ac17dc453
+Taking next connection to: 50211

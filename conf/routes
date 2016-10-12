@@ -2,7 +2,9 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+
 GET     /                           controllers.LabelC.index
+GET     /show/:labelId              controllers.LabelC.show(labelId: Long)
 GET     /add                        controllers.LabelC.add
 POST    /create                     controllers.LabelC.create
 GET     /:labelId/edit              controllers.LabelC.edit(labelId: Long)
@@ -10,6 +12,8 @@ POST    /update                     controllers.LabelC.update
 GET     /:labelId/delete            controllers.LabelC.delete(labelId: Long)
 POST    /destroy                    controllers.LabelC.destroy
 
+POST    /:labelId/task/create      controllers.TaskC.create(labelId: Long)
+GET		/task/:taskId/destroy		controllers.TaskC.destroy(taskId: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

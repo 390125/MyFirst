@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import com.avaje.ebean.Model;
+
 import play.data.validation.Constraints;
 
 /**
@@ -33,12 +34,16 @@ public class Label extends Model {
 
     private static Finder<Long, Label> find = new Finder<Long, Label>(Label.class);
 
+
+    /* idで検索する */
     public static Label findById(long id) {
+    	//SQLクエリに近い？もの
         return find.where()
                 .eq("id", id)
                 .findUnique();
     }
 
+    //全部取り出す
     public static List<Label> findAll() {
         return find.findList();
     }
@@ -62,4 +67,9 @@ public class Label extends Model {
         this.updateDate = now;
         super.update();
     }
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "label_id")
+    public List<Task> tasks;
+
 }
