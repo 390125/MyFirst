@@ -9,7 +9,7 @@
 		}
 		<li>
 		@helper.form(action = routes.TaskC.create(label.id)){
-			<input type= "text" value ="@label.id" name="labelId">
+			<input type= "hidden" value ="@label.id" name="labelId">
 			<input type= "text" value="@form("title").value" name="title">
 			<input type= "submit" value="タスク追加">
 		}

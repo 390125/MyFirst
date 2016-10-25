@@ -1,0 +1,8 @@
+New log file opened at Tue Oct 25 21:37:40 JST 2016 by 8476@DESKTOP-UJ38DB9
+Sending msg to client play-fork-run-75de9835-be20-45dc-93eb-df9a9f8587d8: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\demo\play-test\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-75de9835-be20-45dc-93eb-df9a9f8587d8: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\demo\play-test\.sbtserver\master.log))
+Sending msg to client play-fork-run-75de9835-be20-45dc-93eb-df9a9f8587d8: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\demo\play-test\.sbtserver\connections\play-fork-run-75de9835-be20-45dc-93eb-df9a9f8587d8.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-75de9835-be20-45dc-93eb-df9a9f8587d8: (3,ReceivedResponse())
